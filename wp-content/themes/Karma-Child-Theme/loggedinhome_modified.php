@@ -17,7 +17,7 @@ truethemes_before_main_hook();
 					<?php if (pmpro_hasMembershipLevel(array(2, 3, 4, 5, 6, 7, 8))) { ?>
 						<div id="browsememberhome">
 							<div id="browsemembercontenthome">
-								<a href="/training/"><img src="http://solidwize.com/solidwize/wp-content/themes/Karma-Child-Theme/images/trainingvideos.png"></a>
+								<a href="/training/"><img src="http://solidwize.com/wp-content/themes/Karma-Child-Theme/images/trainingvideos.png"></a>
 								<h4><a href="/training/">Get Straight to Training.</a></h4>
 								<p><a href="/training/">Click here to head straight to our training page and start learning.</a></p>
 							</div>
@@ -46,7 +46,7 @@ truethemes_before_main_hook();
 					<?php if (pmpro_hasMembershipLevel(array(0, 1))) { ?>
 						<div id="browsememberhome">
 							<div id="browsemembercontenthome">
-								<a href="/training/"><img src="http://solidwize.com/solidwize/wp-content/themes/Karma-Child-Theme/images/trainingvideos.png"></a>
+								<a href="/training/"><img src="http://solidwize.com/wp-content/themes/Karma-Child-Theme/images/trainingvideos.png"></a>
 								<h4><a href="/training/">Get Straight to Training.</a></h4>
 								<p><a href="/training/">Click here to head straight to our training page and start learning.</a></p>
 						
@@ -56,9 +56,10 @@ truethemes_before_main_hook();
 						<div id="newcontentmemberhome">
 							<h4>- Free Content -</h4>
 							<p style="font-size:14px;line-height:1em;margin-top:5px	">The content below will always be free. <br>Click one of the buttons below to get started.</p>
-							<a href="/training/intro-to-solidworks" title="Intro to SolidWorks"><img style="margin-top:0px;" width="183" height="100" src="http://solidwize.com/solidwize/wp-content/uploads/2011/11/intro.png"></a>
+							<a href="/training/intro-to-solidworks" title="Intro to SolidWorks"><img style="margin-top:0px;" width="183" height="100" src="http://solidwize.com/wp-content/uploads/2011/11/intro.png"></a>
 							<a href="/training/intro-to-solidworks">Intro to SolidWorks</a>
-							<a href="/training/parts" title="Part Modeling"><img width="183" height="100" src="http://solidwize.com/solidwize/wp-content/uploads/2011/11/parts.png"></a>
+							<a href="/training/parts" title="Part Modeling"><img width="183" height="100" src="http://solidwize.com/
+							wp-content/uploads/2011/11/parts.png"></a>
 							<a href="/training/parts">Part Modeling</a>
 						</div>
 						<div id="freememberhome">
