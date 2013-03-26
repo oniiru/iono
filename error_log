@@ -1,0 +1,527 @@
+[24-Sep-2012 23:12:49] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-09-24 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-09-24 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[24-Sep-2012 23:12:49] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-09-24 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-09-24 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-09-24 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-09-24 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-09-24 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[25-Sep-2012 23:12:30] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-09-25 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-09-25 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[25-Sep-2012 23:12:30] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-09-25 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-09-25 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-09-25 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-09-25 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-09-25 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[26-Sep-2012 23:16:02] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-09-26 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-09-26 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[26-Sep-2012 23:16:02] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-09-26 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-09-26 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-09-26 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-09-26 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-09-26 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[27-Sep-2012 23:14:09] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-09-27 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-09-27 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[27-Sep-2012 23:14:09] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-09-27 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-09-27 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-09-27 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-09-27 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-09-27 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[28-Sep-2012 23:12:37] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-09-28 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-09-28 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[28-Sep-2012 23:12:37] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-09-28 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-09-28 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-09-28 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-09-28 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-09-28 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[29-Sep-2012 23:12:17] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-09-29 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-09-29 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[29-Sep-2012 23:12:17] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-09-29 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-09-29 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-09-29 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-09-29 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-09-29 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[30-Sep-2012 23:15:12] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-09-30 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-09-30 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[30-Sep-2012 23:15:12] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-09-30 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-09-30 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-09-30 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-09-30 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-09-30 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[01-Oct-2012 23:14:05] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-01 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-01 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[01-Oct-2012 23:14:05] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-01 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-01 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-01 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-01 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-01 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[02-Oct-2012 23:13:57] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-02 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-02 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[02-Oct-2012 23:13:57] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-02 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-02 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-02 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-02 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-02 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[03-Oct-2012 23:15:39] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-03 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-03 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[03-Oct-2012 23:15:39] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-03 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-03 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-03 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-03 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-03 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[04-Oct-2012 23:13:36] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-04 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-04 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[04-Oct-2012 23:13:36] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-04 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-04 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-04 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-04 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-04 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[05-Oct-2012 23:12:40] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-05 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-05 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[05-Oct-2012 23:12:40] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-05 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-05 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-05 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-05 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-05 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[06-Oct-2012 23:17:22] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-06 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-06 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[06-Oct-2012 23:17:22] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-06 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-06 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-06 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-06 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-06 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[07-Oct-2012 23:16:08] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-07 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-07 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[07-Oct-2012 23:16:08] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-07 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-07 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-07 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-07 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-07 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[08-Oct-2012 23:12:42] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-08 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-08 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[08-Oct-2012 23:12:43] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-08 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-08 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-08 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-08 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-08 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[09-Oct-2012 23:14:25] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-09 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-09 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[09-Oct-2012 23:14:25] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-09 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-09 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-09 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-09 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-09 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[10-Oct-2012 23:14:07] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-10 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-10 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[10-Oct-2012 23:14:07] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-10 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-10 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-10 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-10 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-10 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[11-Oct-2012 23:16:58] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-11 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-11 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[11-Oct-2012 23:16:58] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-11 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-11 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-11 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-11 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-11 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[12-Oct-2012 23:16:53] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-12 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-12 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[12-Oct-2012 23:16:53] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-12 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-12 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-12 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-12 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-12 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[13-Oct-2012 23:13:27] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-13 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-13 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[13-Oct-2012 23:13:27] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-13 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-13 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-13 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-13 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-13 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[14-Oct-2012 23:13:35] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-14 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-14 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[14-Oct-2012 23:13:35] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-14 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-14 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-14 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-14 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-14 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[15-Oct-2012 23:12:19] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-15 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-15 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[15-Oct-2012 23:12:19] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-15 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-15 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-15 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-15 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-15 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[16-Oct-2012 23:14:37] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-16 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-16 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[16-Oct-2012 23:14:38] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-16 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-16 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-16 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-16 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-16 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[17-Oct-2012 23:16:50] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-17 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-17 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[17-Oct-2012 23:16:50] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-17 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-17 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-17 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-17 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-17 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[18-Oct-2012 23:12:20] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-18 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-18 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[18-Oct-2012 23:12:20] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-18 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-18 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-18 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-18 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-18 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[19-Oct-2012 23:13:46] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-19 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-19 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[19-Oct-2012 23:13:46] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-19 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-19 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-19 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-19 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-19 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[20-Oct-2012 23:12:10] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-20 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-20 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[20-Oct-2012 23:12:10] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-20 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-20 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-20 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-20 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-20 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[21-Oct-2012 23:12:14] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-21 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-21 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[21-Oct-2012 23:12:14] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-21 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-21 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-21 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-21 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-21 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[22-Oct-2012 23:13:56] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-22 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-22 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[22-Oct-2012 23:13:56] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-22 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-22 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-22 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-22 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-22 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[23-Oct-2012 23:14:52] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-23 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-23 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[23-Oct-2012 23:14:52] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-23 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-23 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-23 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-23 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-23 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
+[24-Oct-2012 23:17:48] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:' at line 1 for query SELECT mu.user_id, mu.membership_id, mu.startdate, mu.enddate FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_expiration_notice' WHERE mu.status = 'active' mu.enddate IS NOT NULL AND mu.enddate <> '' AND mu.enddate <> '0000-00-00 00:00:00' AND DATE_SUB(enddate, INTERVAL 7 Day) <= '2012-10-24 00:00:00' AND (um.meta_value IS NULL OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-24 00:00:00') ORDER BY mu.enddate made by do_action_ref_array, call_user_func_array, pmpro_cron_expiration_warnings
+[24-Oct-2012 23:17:48] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = '' at line 4 for query 
+		SELECT 
+			mu.user_id, mu.membership_id, mu.startdate, mu.cycle_period, mu.trial_limit FROM wp_pmpro_memberships_users mu LEFT JOIN wp_usermeta um ON um.user_id = mu.user_id AND um.meta_key = 'pmpro_trial_ending_notice' 
+		WHERE 
+			mu.status = 'active' mu.trial_limit IS NOT NULL AND mu.trial_limit > 0 AND
+			(
+				(cycle_period = 'Day' AND DATE_ADD(startdate, INTERVAL trial_limit Day) <= DATE_ADD('2012-10-24 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Week' AND DATE_ADD(startdate, INTERVAL trial_limit Week) <= DATE_ADD('2012-10-24 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Month' AND DATE_ADD(startdate, INTERVAL trial_limit Month) <= DATE_ADD('2012-10-24 00:00:00', INTERVAL 7 Day)) OR
+				(cycle_period = 'Year' AND DATE_ADD(startdate, INTERVAL trial_limit Year) <= DATE_ADD('2012-10-24 00:00:00', INTERVAL 7 Day)) 
+			)			
+						
+			AND (um.meta_value IS NULL OR um.meta_value = '' OR DATE_ADD(meta_value, INTERVAL 7 Day) <= '2012-10-24 00:00:00') 
+		ORDER BY mu.startdate made by do_action_ref_array, call_user_func_array, pmpro_cron_trial_ending_warnings
