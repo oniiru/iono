@@ -72,7 +72,7 @@
 		<div class="featureset1">
 		<img src="http://solidwize.com/solidwize/wp-content/themes/Karma-Child-Theme/images/books.png">
 <h2>Access to All Courses</h2>
-			<p>Get instant access to hundreds of tutorials and training files. New Courses added weekly.</p>
+			<p>Get instant access to hundreds of tutorials and training files. New Courses are added weekly.</p>
 		</div>
 		<div class="featureset1">
 					<img src="http://solidwize.com/solidwize/wp-content/themes/Karma-Child-Theme/images/slide.png">
