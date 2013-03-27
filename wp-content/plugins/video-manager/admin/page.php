@@ -141,6 +141,17 @@ class IonVideoPage extends IonVideoPageTemplates {
 		$this->process_submission();
 		//echo $wpdb->num_queries;
 	}
+	
+	/**
+	 * Adjusts all the embed codes to have the textarea resolution of FullHD (just in case ;))
+	 * @param text $code
+	 * @return text
+	 */
+	public static function adjustVideoSize($code){
+		$code = preg_replace("/height\=(\"|\')[0-9]+(\"|\')/", 'height="1080"', stripslashes($code));
+		$code = preg_replace("/width\=(\"|\')[0-9]+(\"|\')/", 'width="1920"', $code);
+		return addslashes($code);
+	}
 
 	function video_directory() {
 		global $wpdb;
@@ -316,7 +327,7 @@ class IonVideoPage extends IonVideoPageTemplates {
 						$stack_ = serialize($stack_);
 						$vid_counter_ = count($stack_);
 
-						if ($wpdb->insert($table_, array('dir_id' => $_POST['did'], 'video_name' => $_POST['video']['name'], 'embed_value' => esc_textarea($_POST['video']['embed']), 'options' => $stack_))) {
+						if ($wpdb->insert($table_, array('dir_id' => $_POST['did'], 'video_name' => $_POST['video']['name'], 'embed_value' => esc_textarea($this->adjustVideoSize($_POST['video']['embed'])), 'options' => $stack_))) {
 							$the_id = $wpdb->insert_id;
 							$old_order = $wpdb->get_results("SELECT video_order FROM $table2_ WHERE id = '" . $_POST['did'] . "'", ARRAY_A);
 							$old_order = unserialize($old_order[0]['video_order']);
@@ -379,7 +390,7 @@ class IonVideoPage extends IonVideoPageTemplates {
 										array_unshift($stack_, array('duration' => $val['duration'], 'options' => $val['options']));
 									}
 									$stack_ = serialize($stack_);
-									$wpdb->update($table1_, array('video_name' => $val['name'], 'embed_value' => esc_textarea($val['value']), 'options' => $stack_), array('ID' => $order[0]));
+									$wpdb->update($table1_, array('video_name' => $val['name'], 'embed_value' => esc_textarea($this->adjustVideoSize($val['value'])), 'options' => $stack_), array('ID' => $order[0]));
 									array_shift($order);
 									$vid_counter_++;
 								}

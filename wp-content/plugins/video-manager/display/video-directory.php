@@ -85,9 +85,6 @@ class IonVideoDirectoryDisplay {
 												$o = unserialize($list['options']);
 
 												$o = $o[0];
-												echo '<pre style="display:none">';
-												print_r($o);
-												echo '</pre>';
 												if ($ion_auth_users->all($o['options'])) {
 													if ($google_analytic == 'on') {
 														?>
@@ -160,7 +157,7 @@ class IonVideoDirectoryDisplay {
 							<h3 class="directory-name"><span><?php echo stripslashes($chapter->directory_name); ?></span></h3>
 							<div class="inside">
 								<ul class="video-list">
-									<li>Coming Soon...</li>
+									<li>No videos available.</li>
 								</ul>
 							</div>
 						</div><!-- empty .postbox -->
@@ -209,7 +206,7 @@ class IonVideoDirectoryDisplay {
 
 	function tabs($d = array(), $content = '') {
 		if ($d['require']) {
-			if(pmpro_hasMembershipLevel(array(0,1))) {
+			if (!is_user_logged_in()) {
 				$tab_settings = get_option('member_tab_settings');
 //				$content = $d['require'];
 				?>
@@ -230,23 +227,30 @@ class IonVideoDirectoryDisplay {
 
 	function video_subscribebar($attr) {
 		$sign_up = IonVideoPageTemplates::get_sign_up_url();
-		if(pmpro_hasMembershipLevel(array(0,1))) {
+		if (!is_user_logged_in()) {
 			?>
 			<div id="buttonNoLgin">
-				<p><?php echo $attr['text']; ?></p><a href="<?php echo $sign_up; ?>" class="<?php echo $attr['color']; ?> subscribevids" title="subscribe"><?php echo $attr['btntext']; ?></a>
+				<p><?php echo $attr['text']; ?></p><a href="<?php echo $sign_up; ?>" class="btnposition btn btn-danger" title="subscribe"><?php echo $attr['btntext']; ?></a>
 			</div>
 			<?php
 		}
+		 if(pmpro_hasMembershipLevel('1')) 
+								{ ?>  
+									<div id="buttonNoLgin">
+										<p>Upgrade your account to access every training section.</p><a href="<?php echo $sign_up; ?>" class="btnposition btn btn-danger" title="subscribe">Upgrade Now</a>
+									</div>
+									<?php }
+									
 	}
 
 	function video_email($attr) {
-		if(pmpro_hasMembershipLevel(array(0,1))) {
+		if (!is_user_logged_in()) {
 			?>
 			<div id="buttonNoLgin">
 				<input type="hidden" id="user_type" name="user_type" value="<?php echo $attr['usertype']; ?>" />
 				<p><?php echo $attr['text']; ?></p>
 				<input type="text" name="user_email" id="user_email" />
-				<a href="javascript:void(0);" class="<?php echo $attr['color']; ?> subscribevids emailvids" title="subscribe"><?php echo $attr['btntext']; ?></a>
+				<a href="javascript:void(0);" class="subscribevids emailvids" title="subscribe"><?php echo $attr['btntext']; ?></a>
 			</div>
 			<?php
 		}

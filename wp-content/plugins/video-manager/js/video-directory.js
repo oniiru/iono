@@ -1,11 +1,39 @@
 // JavaScript Document
+//class fancyboxCustom 
 
 jQuery(document).ready( function() {
 	jQuery('.postbox h3.directory-name').click( function() {
 		jQuery(jQuery(this).parent().get(0)).toggleClass('closed');
 	});
 
-	jQuery('.show_iframe').fancybox();
+	jQuery('.show_iframe').fancybox({
+		'onComplete':function(){
+			var container = jQuery(jQuery(jQuery('#fancybox-content').html()).html());
+			var content = jQuery(container).html();
+			var containerID = jQuery(container).attr('id');
+			if(content.length) {
+				this.originalID = containerID;
+				this.originalHTML = content;
+			}
+			var targetWidth = jQuery('#fancybox-content').innerWidth();
+			var currentWidth = jQuery(content).attr('width');
+			if(targetWidth<currentWidth) {
+				var currentHeight = jQuery(content).attr('height');
+				var q = targetWidth/currentWidth;
+				var targetHeight = Math.round(q*currentHeight) + '';
+				var heightPattern = new RegExp("height[\\s]*=[\\s]*[\\'\\\"]{1}" + currentHeight + "[\\'\\\"]{1}");
+				content = content.replace(heightPattern, 'height="' + targetHeight + '"');
+				var widthPattern = new RegExp("width[\\s]*=[\\s]*[\\'\\\"]{1}" + currentWidth + "[\\'\\\"]{1}");
+				content = content.replace(widthPattern, 'width="' + targetWidth + '"');
+				jQuery('#' + containerID).html(content);
+			}
+		},
+		'onClosed': function(){
+			if(this.originalHTML && this.originalID) {
+				jQuery('#' + this.originalID).html(this.originalHTML);
+			}
+		}
+	});
 	
 	jQuery('.show_jw_player').fancybox();
 	
